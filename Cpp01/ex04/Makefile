@@ -22,6 +22,7 @@ $(ODIR)/%.o : %.cpp
 clean:
 		@echo "Removing executable..."
 		@rm -f $(NAME)
+		@rm -f *.replace
 
 fclean: clean
 		@echo "Removing object files..."
