@@ -9,7 +9,6 @@ Zombie::Zombie(void) : _name("Nekros"){
 }
 
 Zombie::~Zombie(void){
-	// std::cout << "PD " << _name << std::endl;
 	return;
 }
 

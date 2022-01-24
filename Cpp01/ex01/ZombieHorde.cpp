@@ -14,14 +14,14 @@ Zombie  *zombieHorde(int N, std::string name){
 	{
 		if (i == 0)
 		{
-			horde[i] = *(new Zombie(name));
+			horde[i] = Zombie(name);
 			continue;
 		}
 		std::stringstream	tmp;
 
 		tmp << i + 1;
 		actual_name = name + "-n°" + tmp.str();
-		horde[i] = *(new Zombie(actual_name));
+		horde[i] = Zombie(actual_name);
 	}
 	return horde;
 }

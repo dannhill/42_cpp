@@ -7,4 +7,5 @@ int main(void){
 	for(int i = 0; i < 24; i++)
 		zeap[i].announce();
 	delete [] zeap;
+	return 0;
 }
