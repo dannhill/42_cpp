@@ -65,7 +65,6 @@ static void	mainSwitch(level eLev, Karen &karen){
 		default:
 			std::cout << "[ Probably complaining about"
 			" insignificant problems ]" << std::endl;
-			std::cout << std::endl;
 			return;
 	}
 }

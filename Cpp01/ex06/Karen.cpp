@@ -32,9 +32,8 @@ void	Karen::complain(std::string level) {
 }
 
 void	Karen::debug(void) {
-	std::cout << "Nowadays videogames are so boring. I like old school isometric";
-	std::cout << " role playing games with an intricate and branching story and ";
-	std::cout << "deep connection between places and characters." << std::endl;
+	std::cout << "I love to get extra levels for my AAA-FirstPersonShooter-RolePlayingGame-Action-Adventure";
+	std::cout << "-StoryDriven-Simulative-Arcade videogame. I just love it!" << std::endl;
 	return;
 }
 
@@ -48,7 +47,7 @@ void	Karen::info(void) {
 void	Karen::warning(void) {
 	std::cout << "I think I deserve to have some extra levels for free. "
 	 "I’ve been playing this game for years and you just "
-	 "started playing it last month." << std::endl;
+	 "started fixing it last month." << std::endl;
 	return;
 }
 

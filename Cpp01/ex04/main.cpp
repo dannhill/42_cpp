@@ -39,8 +39,8 @@ int main(int c, char **v){
 			continue;
 		}
 		ifile >> word;
-		if (word.compare(0, word.length(), v[2]) == 0)
-			word = std::string(v[3]) + word.substr(strlen(v[3]), word.length() - strlen(v[3]));
+		if (word.compare(0, std::string(v[2]).length(), std::string(v[2])) == 0)
+			word = std::string(v[3]) + word.substr(strlen(v[2]), word.length() - strlen(v[2]));
 		ofile << word;
 	}
 	ifile.close();
