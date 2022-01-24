@@ -24,13 +24,12 @@ int	main(int c, char **v)
 
 	i = 0;
 	if (c <= 1)
-	{
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	}
 	else
 	{
 		while (++i < c)
 			ft_putstrpp(v[i]);
+		std::cout << std::endl;
 	}
-	return (1);
+	return (0);
 }

@@ -16,7 +16,7 @@ void		PhoneBook::openPhoneBook(void){
 	std::cout << "type ADD to add a contact, EXIT to quit the program, or SEARCH to seek existing contact." << std::endl;
 	while (true)
 	{
-		std::cout << "->";
+		std::cout << "->" << std::flush;
 		std::getline(std::cin, buffer);
 		if (buffer.compare("ADD") == 0)
 			_addContact();

@@ -1,6 +1,6 @@
 SOURCES	= Contact.cpp PhoneBook.cpp main.cpp \
 
-NAME = MAPB
+NAME = MyLittlePhonebook
 
 CC = clang++
 
