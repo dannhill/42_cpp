@@ -21,17 +21,17 @@ Fixed &	exToEpsilon(Fixed & x){
 }
 
 Fixed	detectDistance(Point const a, Point const b){
-	Fixed 	res;
 	Fixed	aa;
 	Fixed	bb;
 
-	return res = 
+	aa = (a.getX() - b.getX()) * (a.getX() - b.getX());
+	bb = (a.getY() - b.getY()) * (a.getY() - b.getY());
+
+	return aa + bb;
 }
 
 bool	bsp(Point const a, Point const b,
 Point const c, Point const point){
-
-
 
 	return true;
 }

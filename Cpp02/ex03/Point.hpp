@@ -9,6 +9,10 @@ class Point{
 		~Point(void);
 
 		Point &	operator=(Point const & point);
+
+		Fixed &	getX(void) const;
+		Fixed &	getY(void) const;
+
 	private:
 		Fixed const	_x;
 		Fixed const	_y;

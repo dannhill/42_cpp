@@ -62,31 +62,31 @@ bool	Fixed::operator!=(Fixed const & fixed){
 }
 
 Fixed	Fixed::operator+(Fixed const & fixed){
-	Fixed	res;
+	Fixed	*res = new Fixed();
 
-	res.setRawBits(this->getRawBits() + fixed.getRawBits());
-	return res;
+	res->setRawBits(this->getRawBits() + fixed.getRawBits());
+	return *res;
 }
 
 Fixed	Fixed::operator-(Fixed const & fixed){
-	Fixed	res;
+	Fixed	*res = new Fixed();
 
-	res.setRawBits(this->getRawBits() - fixed.getRawBits());
-	return res;
+	res->setRawBits(this->getRawBits() - fixed.getRawBits());
+	return *res;
 }
 
 Fixed	Fixed::operator*(Fixed const & fixed){
-	Fixed	res;
+	Fixed	*res = new Fixed();
 
-	res.setRawBits((this->getRawBits() * fixed.getRawBits()) >> _fBits);
-	return res;
+	res->setRawBits((this->getRawBits() * fixed.getRawBits()) >> _fBits);
+	return *res;
 }
 
 Fixed	Fixed::operator/(Fixed const & fixed){
-	Fixed	res;
+	Fixed	*res = new Fixed();
 
-	res.setRawBits((this->getRawBits() / fixed.getRawBits()) << _fBits);
-	return res;
+	res->setRawBits((this->getRawBits() / fixed.getRawBits()) << _fBits);
+	return *res;
 }
 
 Fixed &	Fixed::operator++(void){
