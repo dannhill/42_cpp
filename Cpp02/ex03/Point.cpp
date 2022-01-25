@@ -1,14 +1,18 @@
 #include "Point.hpp"
 
-Point::Point(void) : _x(0), _y(0){
+Point::Point(void) : _x(0), _y(0), _tag('d'){
 	return;
 }
 
-Point::Point(const Point & point) : _x(point._x), _y(point._y){
+Point::Point(const Point & point) : _x(point._x), _y(point._y), _tag('p'){
 	return;
 }
 
-Point::Point(const float x, const float y) : _x(x), _y(y){
+Point::Point(const float x, const float y) : _x(x), _y(y), _tag('f'){
+	return;
+}
+
+Point::Point(char tag, const float x, const float y) : _x(x), _y(y), _tag(tag){
 	return;
 }
 
@@ -32,4 +36,12 @@ Fixed &	Point::getX(void) const{
 
 Fixed &	Point::getY(void) const{
 	return *(new Fixed(_y));
+}
+
+char	Point::getTag(void) const{
+	return _tag;
+}
+
+void	Point::setTag(char c){
+	_tag = c;
 }
