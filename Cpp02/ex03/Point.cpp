@@ -8,6 +8,10 @@ Point::Point(const Point & point) : _x(point._x), _y(point._y), _tag('p'){
 	return;
 }
 
+Point::Point(char tag, const Point & point) : _x(point._x), _y(point._y), _tag(tag){
+	return;
+}
+
 Point::Point(const float x, const float y) : _x(x), _y(y), _tag('f'){
 	return;
 }
@@ -27,6 +31,7 @@ Point &	Point::operator=(Point const & point){
 
 	*xx = point._x;
 	*yy = point._y;
+	setTag(point.getTag());
 	return *this;
 }
 

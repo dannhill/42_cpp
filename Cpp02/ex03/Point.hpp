@@ -5,6 +5,7 @@ class Point{
 	public:
 		Point(void);
 		Point(const Point & point);
+		Point(char tag, const Point & point);
 		Point(const float x, const float y);
 		Point(char tag, const float x, const float y);
 		~Point(void);

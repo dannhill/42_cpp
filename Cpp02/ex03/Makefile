@@ -1,6 +1,6 @@
-SOURCES	= Fixed.cpp Point.cpp bsp.cpp \
+SOURCES	= Fixed.cpp Point.cpp bsp.cpp main.cpp \
 
-NAME = fixedTest
+NAME = runtest
 
 CC = clang++
 
