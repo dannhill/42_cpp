@@ -2,6 +2,15 @@
 #include <ctime>
 #include <iostream>
 
+//functions prototypes
+Base	*generate(void);
+
+void	identify(Base *p);
+
+void	identify(Base & p);
+
+
+//functions definitions
 Base	*generate(void){
 	return rand() % 3 ? (rand() % 2 ? static_cast<Base *>(new B)
 		: static_cast<Base *>(new C))
