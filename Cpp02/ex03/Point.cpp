@@ -36,11 +36,11 @@ Point &	Point::operator=(Point const & point){
 }
 
 Fixed &	Point::getX(void) const{
-	return *(new Fixed(_x));
+	return *(const_cast<Fixed *>(&_x));
 }
 
 Fixed &	Point::getY(void) const{
-	return *(new Fixed(_y));
+	return *(const_cast<Fixed *>(&_y));
 }
 
 char	Point::getTag(void) const{

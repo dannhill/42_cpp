@@ -9,6 +9,7 @@ class Fixed{
 		Fixed(const int integer);
 		Fixed(const float floating);
 		Fixed(Fixed const & fixed);
+		Fixed(unsigned int raw);
 		~Fixed(void);
 
 		Fixed &	operator=(Fixed const & fixed);

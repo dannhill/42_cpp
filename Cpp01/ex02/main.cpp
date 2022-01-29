@@ -6,6 +6,8 @@ int main(void){
     std::string *stringPTR(&str);
     std::string &stringREF(str);
 
+	stringREF.append("ciao");
+
     std::cout << "String memory address: " << &str << std::endl;
     std::cout << "String memory address(PTR): " << stringPTR << std::endl;
     std::cout << "String memory address(REF): " << &stringREF << std::endl;

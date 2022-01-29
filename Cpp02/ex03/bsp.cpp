@@ -81,14 +81,25 @@ Point const c, Point const point){
 	Global	*gl = new Global(m, q);
 	glbl = gl;
 
-	if ((getQ(point, glbl->m) - glbl->q) * 
-		(getQ(point, glbl->m) - getQ(e, glbl->m)) < 0)
+	Fixed	*tmp;
+	Fixed	*tmp1;
+	Fixed	*tmp2;
+
+
+	if ((*(tmp = &getQ(point, glbl->m)) - glbl->q) * 
+		(*(tmp1 = &getQ(point, glbl->m)) - *(tmp2 = &getQ(e, glbl->m))) < 0)
 	{
+		delete tmp;
+		delete tmp1;
+		delete tmp2;
 		delete glbl;
 		return true;
 	}
 	else
 	{
+		delete tmp;
+		delete tmp1;
+		delete tmp2;
 		delete glbl;
 		return false;
 	}

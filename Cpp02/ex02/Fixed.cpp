@@ -28,6 +28,10 @@ Fixed::Fixed(Fixed const & fixed)
 	return;
 }
 
+Fixed::Fixed(unsigned int raw) : _fpValue(raw){
+	return;
+}
+
 Fixed::~Fixed(void){
 	return;
 }
@@ -62,31 +66,31 @@ bool	Fixed::operator!=(Fixed const & fixed){
 }
 
 Fixed	Fixed::operator+(Fixed const & fixed){
-	Fixed	res;
+	// Fixed	*res = new Fixed();
 
-	res.setRawBits(this->getRawBits() + fixed.getRawBits());
-	return res;
+	// res->setRawBits(this->getRawBits() + fixed.getRawBits());
+	return Fixed(static_cast<unsigned int>(this->getRawBits() + fixed.getRawBits()));
 }
 
 Fixed	Fixed::operator-(Fixed const & fixed){
-	Fixed	res;
+	// Fixed	*res = new Fixed();
 
-	res.setRawBits(this->getRawBits() - fixed.getRawBits());
-	return res;
+	// res->setRawBits(this->getRawBits() - fixed.getRawBits());
+	return Fixed(static_cast<unsigned int>(this->getRawBits() - fixed.getRawBits()));
 }
 
 Fixed	Fixed::operator*(Fixed const & fixed){
-	Fixed	res;
+	// Fixed	*res = new Fixed();
 
-	res.setRawBits((this->getRawBits() * fixed.getRawBits()) >> _fBits);
-	return res;
+	// res->setRawBits((this->getRawBits() * fixed.getRawBits()) >> _fBits);
+	return Fixed(static_cast<unsigned int>((this->getRawBits() * fixed.getRawBits()) >> _fBits));
 }
 
 Fixed	Fixed::operator/(Fixed const & fixed){
-	Fixed	res;
+	// Fixed	*res = new Fixed();
 
-	res.setRawBits((this->getRawBits() / fixed.getRawBits()) << _fBits);
-	return res;
+	// res->setRawBits((this->getRawBits() / fixed.getRawBits()) << _fBits);
+	return Fixed(static_cast<unsigned int>((this->getRawBits() / fixed.getRawBits()) << _fBits));
 }
 
 Fixed &	Fixed::operator++(void){
@@ -96,10 +100,10 @@ Fixed &	Fixed::operator++(void){
 }
 
 Fixed 	Fixed::operator++(int){
-	Fixed	res(*this);
+	// Fixed	res(*this);
 
 	this->setRawBits(this->getRawBits() + 1);
-	return res;
+	return Fixed(*this);
 }
 
 Fixed &	Fixed::operator--(void){
@@ -109,10 +113,10 @@ Fixed &	Fixed::operator--(void){
 }
 
 Fixed 	Fixed::operator--(int){
-	Fixed	res(*this);
+	// Fixed	res(*this);
 
 	this->setRawBits(this->getRawBits() - 1);
-	return res;
+	return Fixed(*this);
 }
 
 int	Fixed::getRawBits(void) const{
