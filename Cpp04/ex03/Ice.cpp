@@ -9,6 +9,7 @@ Ice::~Ice(void){
 }
 
 AMateria	*Ice::clone(void) const{
+	// std::cout << "iceclone\n";
 	return new Ice();
 }
 

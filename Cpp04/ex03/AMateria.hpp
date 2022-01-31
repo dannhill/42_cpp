@@ -13,6 +13,7 @@ class AMateria
 
 	public:
 		AMateria(std::string const & type);
+		AMateria(AMateria const & cpy);
 		virtual	~AMateria(void);
 
 		std::string const & getType() const; //Returns the materia type
@@ -23,6 +24,8 @@ class AMateria
 		void	disable(void);
 		void	enable(void);
 		bool	isActive(void);
+
+		AMateria &	operator=(AMateria const & asn);
 	private:
 		AMateria(void);
 };

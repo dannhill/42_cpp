@@ -9,6 +9,7 @@ Cure::~Cure(void){
 }
 
 AMateria	*Cure::clone(void) const{
+	// std::cout << "cureclone\n";
 	return new Cure();
 }
 

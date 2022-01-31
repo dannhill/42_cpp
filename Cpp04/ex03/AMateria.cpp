@@ -5,6 +5,10 @@ _active(true){
 	return;
 }
 
+AMateria::AMateria(AMateria const & cpy) : _type("unknown"){
+	_active = cpy._active;
+}
+
 std::string const &	AMateria::getType(void) const{
 	return _type;
 }
@@ -34,4 +38,10 @@ void	AMateria::enable(void){
 
 bool	AMateria::isActive(void){
 	return _active;
+}
+
+AMateria &	AMateria::operator=(AMateria const & asn){
+	_active = asn._active;
+
+	return *this;
 }

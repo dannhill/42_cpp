@@ -6,6 +6,8 @@
 
 int main()
 {
+	Character pippo("pippo");//extra
+	Ice	ciao;//extra
 	IMateriaSource* src = new MateriaSource();
 
 	src->learnMateria(new Ice());
@@ -24,6 +26,12 @@ int main()
 	me->use(0, *bob);
 	me->use(1, *bob);
 	
+	std::cout << std::endl;
+
+	Character	kek(*(static_cast<Character *>(bob)));
+
+	ciao.use(pippo);
+
 	delete bob;
 	delete me;
 	delete src;

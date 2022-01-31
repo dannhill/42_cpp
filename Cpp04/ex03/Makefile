@@ -17,6 +17,7 @@ all : $(NAME)
 $(NAME)	: $(ODIR) $(OBJS)
 		@echo "Linking..."
 		@$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
+		@say "BOOM!"
 
 $(ODIR)/%.o : %.cpp
 		@echo "Compiling file..."
