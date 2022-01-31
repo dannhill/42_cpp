@@ -4,7 +4,7 @@ NAME = open
 
 CC = clang++
 
-CFLAGS = -std=c++98 -Wall -Wextra -Werror
+CFLAGS = -std=c++98 -Wall -Wextra -Werror -Wshadow
 
 OBJS = $(SOURCES:%.cpp=objs/%.o)
 ODIR = objs

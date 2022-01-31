@@ -9,6 +9,8 @@ int	main(void){
 	FragTrap	lawrence("Lawrence");
 	DiamondTrap	carbon("Carbon");
 
+	std::cout << std::endl;
+
 	cletus.attack("Kabiro");
 	cletus.takeDamage(5);
 	cletus.beRepaired(15);
@@ -20,6 +22,10 @@ int	main(void){
 	lawrence.beRepaired(50);
 	carbon.whoAmI();
 	carbon.attack("Dani");
+	carbon.guardGate();
+	carbon.highFivesGuys();
+
+	std::cout << std::endl;
 
 	return 0;
 }

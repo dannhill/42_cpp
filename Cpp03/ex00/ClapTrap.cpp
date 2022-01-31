@@ -8,6 +8,12 @@ _energy_points(10), _attack_damage(0){
 	return;
 }
 
+ClapTrap::ClapTrap(ClapTrap const & cpy) : _name(cpy._name), _hitpoints(cpy._hitpoints),
+_energy_points(cpy._energy_points), _attack_damage(cpy._attack_damage){
+	std::cout << "ClapTrap " << _name << " has been cloned from another ClapTrap." << std::endl;
+	return;
+}
+
 ClapTrap::~ClapTrap(void){
 	std::cout << "The tale of the ClapTrap named " << _name <<
 		" ends here..." << std::endl;
@@ -45,6 +51,16 @@ void	ClapTrap::beRepaired(unsigned int amount){
 		std::cout << "ClapTrap " << _name << " is being repaired "
 			"for " << amount << " hitpoints." << std::endl;
 	_hitpoints += amount;
+}
+
+ClapTrap &	ClapTrap::operator=(ClapTrap const & asn){
+	std::cout << "ClapTrap " << _name << " has been reassigned to be ClapTrap " << asn._name << std::endl;
+	_name = asn._name;
+	_hitpoints = asn._hitpoints;
+	_energy_points = asn._energy_points;
+	_attack_damage = asn._attack_damage;
+
+	return *this;
 }
 
 ClapTrap::ClapTrap(void){
