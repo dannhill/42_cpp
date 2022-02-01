@@ -13,13 +13,13 @@ class Form{
 		Form(Form const & f);
 		~Form(void);
 
-		bool	is_signed;
-
 		void	beSigned(Bureaucrat const & b);
 
 		std::string	getName(void) const;
 		int	getSignGrade(void) const;
 		int	getExecGrade(void) const;
+		bool	getSignState(void) const;
+		void	setSignState(bool state);
 	
 		class GradeTooHighException : std::exception{
 			public:
@@ -34,6 +34,7 @@ class Form{
 				}
 		};
 	private:
+		bool		_is_signed;
 		std::string const	_name;
 		int const	_sign_grade;
 		int const	_exec_grade;

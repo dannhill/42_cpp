@@ -57,7 +57,7 @@ void	Bureaucrat::signForm(Form & f) const{
 	{
 		std::cout << this->getName() << " signs " << f.getName() <<
 			"." << std::endl;
-		f.is_signed = true;
+		f.beSigned(*this);
 	}
 	return;
 }

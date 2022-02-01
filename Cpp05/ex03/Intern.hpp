@@ -9,10 +9,13 @@
 class Intern{
 	public:
 		Intern(void);
+		Intern(Intern const & cpy);
 		~Intern(void);
 
 		Form	*makeForm(std::string formType, std::string target) const;
 		
+
+		Intern &	operator=(Intern const & asn);
 		class FormNotFoudException : public std::exception{
 			public:
 				virtual const char	*what(void) const throw(){
@@ -20,5 +23,5 @@ class Intern{
 				}
 		};
 	private:
-		static std::string	_formNamez[3];
+		static const std::string	_formNamez[3];
 };

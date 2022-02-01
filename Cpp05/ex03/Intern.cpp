@@ -1,11 +1,16 @@
 #include "Intern.hpp"
 
-std::string	Intern::_formNamez[3] = {"shrubbery creation",
+const std::string	Intern::_formNamez[3] = {"shrubbery creation",
 "robotomy request", "presidential pardon"};
 
 Intern::Intern(void){
 	return;
 }
+
+// ho provato ad inserirla ma non compila
+// Intern::Intern(Intern const & cpy){
+// 	return;
+// }
 
 Intern::~Intern(void){
 	return;
@@ -43,3 +48,7 @@ Form	*Intern::makeForm(std::string formType, std::string target) const{
 		exit(1);
 	}
 }
+//ho provato ad inserirla ma non compila
+// Intern &	Intern::operator=(Intern const & asn){
+// 	return *this;
+// }
