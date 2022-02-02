@@ -11,7 +11,7 @@ class Array{
 		}
 		Array<T>(unsigned int n) : _len(n){
 			_array = new T[n];
-			for (unsigned int i(0); i < n; i++)
+			for (unsigned int i(0); i < n; i++)//loop non necessario
 				_array[i] = T();
 			return;
 		}
@@ -23,11 +23,11 @@ class Array{
 			return;
 		}
 		virtual	~Array<T>(void){
-			delete _array;
+			delete []	_array;
 		}
 		Array<T> &	operator=(const Array<T> & asn){
 			_len = asn._len;
-			delete _array;
+			delete []	_array;
 			_array = new T[_len];
 			for (unsigned int i(0); i < _len; i++)
 				_array[i] = asn._array[i];
