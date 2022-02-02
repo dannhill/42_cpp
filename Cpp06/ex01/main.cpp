@@ -48,4 +48,6 @@ int	main(void){
 		<< std::endl;
 	std::cout << "d = " << std::hex << d << std::endl;
 	std::cout << "spec = " << std::hex << spec << std::endl;
+
+	delete d;
 }

@@ -4,6 +4,11 @@ Converter::Converter(std::string input) : _input(input){
 	return;
 }
 
+Converter::Converter(Converter const & cpy){
+	_input = cpy._input;
+	return;
+}
+
 Converter::~Converter(void){
 	return;
 }
@@ -254,4 +259,9 @@ bool	Converter::_areDigits(void) const{
 		if (_input[i] >= '0' && _input[i] <= '9')
 			return true;
 	return false;
+}
+
+Converter &	Converter::operator=(Converter const & asn){
+	_input = asn._input;
+	return *this;
 }

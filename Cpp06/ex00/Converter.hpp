@@ -9,6 +9,7 @@
 class Converter{
 	public:
 		Converter(std::string input);
+		Converter(Converter const & cpy);
 		~Converter(void);
 
 		operator char(void) const;
@@ -22,6 +23,8 @@ class Converter{
 		void	showConvert(int) const;
 		void	showConvert(float) const;
 		void	showConvert(double) const;
+	
+		Converter &	operator=(Converter const & asn);
 	private:
 		Converter(void);
 
