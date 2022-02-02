@@ -11,5 +11,11 @@ int	main(void){
 	vec.push_back(55);
 	vec.push_back(66);
 
-	std::cout << easyfind(vec, 31) << std::endl;
+
+	try{
+		std::cout << easyfind(vec, 32) << std::endl;
+	}
+	catch (std::exception & e){
+		std::cerr << e.what() << std::endl;
+	}
 }

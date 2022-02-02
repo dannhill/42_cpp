@@ -10,13 +10,10 @@ int &	easyfind(T & cont, int n){
 	for (; s != e; s++)
 		if (*s == n)
 			break;
-	try{
 		if (s == e)
+		{
 			throw std::exception();
+			return *(new int(-1));
+		}
 		return *s;
-	}
-	catch (std::exception & e){
-		std::cerr << "Value not found." << std::endl;
-		return *(new int(-1));
-	}
 }
