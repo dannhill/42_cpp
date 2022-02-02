@@ -34,17 +34,12 @@ class Array{
 			return;
 		}
 		T &	operator[](unsigned int i){
-			try{
-				if (i >= _len)
-					throw std::exception();
-				return _array[i];
-			}
-			catch (std::exception & e){
-				std::cerr << "Error: trying to acces out-of-bound element."
-					<< std::endl;
-				std::cerr << "Max length = " << _len << "." << std::endl;
+			if (i >= _len)
+			{
+				throw std::exception();
 				return *(new T());
 			}
+			return _array[i];
 		}
 		unsigned int	size(void) const{
 			return _len;

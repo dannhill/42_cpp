@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream> //da rimuovere
 
 template <typename T>
 void	iter(T *arr, unsigned int n, void (*f)(T &)){
@@ -7,8 +8,8 @@ void	iter(T *arr, unsigned int n, void (*f)(T &)){
 	return;
 }
 
-template <char>
-void	iter(char *arr, unsigned int n, void (*f)(char &)){
+template <>
+void	iter<char>(char *arr, unsigned int n, void (*f)(char &)){
 	for (unsigned int i(0); i < n && arr[i] != '\0'; i++)
 		(*f)(arr[i]);
 	return;
