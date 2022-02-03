@@ -13,7 +13,7 @@ int	main(void){
 
 
 	try{
-		std::cout << easyfind(vec, 32) << std::endl;
+		std::cout << easyfind(vec, 31) << std::endl;
 	}
 	catch (std::exception & e){
 		std::cerr << e.what() << std::endl;

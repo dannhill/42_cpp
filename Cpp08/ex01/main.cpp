@@ -12,7 +12,6 @@ int	main(void){
 	naps.addNumber(28);
 	naps.addNumber(98);
 	naps.addNumber(11);
-	naps.addNumber(3);
 
 	std::cout << std::endl;
 
@@ -80,6 +79,31 @@ int	main(void){
 
 	std::cout << "Longestest span: " << tk.longestSpan() << std::endl;
 	std::cout << "Shortesest span: " << tk.shortestSpan() << std::endl;
+
+	std::cout << std::endl;
+
+	Span				abc(5);
+	std::vector<int>	def(5);
+
+	for (int i(0); i < 5; i++)
+		def[i] = i;
+
+	abc.addNumber(def.begin(), def.end());
+
+	std::cout << abc.shortestSpan() << std::endl;
+	std::cout << abc.longestSpan() << std::endl;
+
+	std::cout << std::endl;
+
+	Span	one(1);
+
+	try{
+		std::cout << one.longestSpan() << std::endl;
+	}
+	catch (Span::NonExistentSpanException & n){
+		std::cerr << n.what() << std::endl << std::endl;
+	}
+	std::cout << one.shortestSpan() << std::endl;
 
 	return 0;
 }
